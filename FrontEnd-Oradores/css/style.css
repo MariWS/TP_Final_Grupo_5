@@ -1,0 +1,187 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.background-image-custom {
+    background-position: right bottom;
+    background-size: cover;
+}
+
+.logo-custom {
+    max-width: 150px;
+    height: auto;
+}
+
+.custom-outline-btn {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.484);
+}
+
+.custom-padding {
+    padding-right: 230px;
+    padding-bottom: 150px;
+}
+
+.custom-footer-menu li a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.textorador{
+    margin-bottom: 0;
+}
+
+
+/*-- JavaScript --*/
+
+#Tipos {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#Azul {
+    border: 1px solid rgba(0, 0, 255, 0.753);
+    padding: 15px;
+    margin-right: 10px;
+}
+
+#Verde {
+    border: 1px solid rgba(0, 102, 255, 0.801);
+    padding: 15px;
+    margin-right: 10px;
+}
+
+#Amarillo {
+    border: 1px solid rgb(255, 196, 0);
+    padding: 15px;
+    margin-right: 10px;
+}
+
+
+/*-- Form --*/
+input {
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(197, 195, 195, 0.623);
+    border-radius: 8px;
+}
+
+#nombre,
+#apellido {
+    height: 30px;
+    display: inline-block;
+}
+#charla{
+    font-size: 1.2em;
+}
+.formulariojs form .text2 {
+    padding: 0;
+    padding-left: .7em;
+    padding-bottom: .7em;
+}
+
+
+input:focus {
+    background-color: rgb(165, 241, 235);
+    color: black;
+}
+textarea:focus{
+    background-color: rgb(165, 241, 235);
+    color: black;
+}
+/*FORM JAVASCRIPT*/
+
+.titulojs{
+    text-align: center;
+}
+.containerjs{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+/* .contact-wrapper0{
+    box-shadow: 0 0 5px 0 rgb(14, 45, 42);
+} */
+
+.contact-wrapper0 >*{
+    padding: 0.6em;
+}
+
+.formulariojs form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulariojs form .block {
+    grid-column: 1 / 3;
+}
+
+.formulariojs form p{
+    margin: 0;
+    padding: .6em;
+}
+
+.formulariojs form button,
+.formulariojs form input{
+    width: 100%;
+    padding: 0.7em;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.formulariojs form label{
+    margin-bottom: 2%;
+}
+
+.formulariojs form button{
+    background-color: rgb(146, 204, 76);
+    border: none;
+    color: rgb(255, 255, 255);
+    /* padding: 1em; */
+    font-size: 1.2em;
+    text-size-adjust: 10px;
+}
+
+#categoriajs{
+    width: 100%;
+    padding: 0.7em;
+    border-color: rgb(207, 207, 207);
+    color: rgb(125, 125, 125);
+    border-radius: 4px;
+}
+
+#valorInput1 {
+    width: 100%;
+    background-color:rgb(199, 221, 255);
+    color: rgb(34, 70, 139);
+    height: auto;
+    padding: .7em;
+    border-color: rgb(125, 168, 233);;
+    border-radius: 4px;
+}
+
+@media (max-width: 500px) {
+    #Tipos{
+        flex-direction: column;
+    }
+
+}
