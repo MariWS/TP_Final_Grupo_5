@@ -83,11 +83,11 @@ input {
     border-radius: 8px;
 }
 
-#nombre,
-#apellido {
+#nombre,#apellido, #email, #fecha {
     height: 30px;
     display: inline-block;
 }
+
 #charla{
     font-size: 1.2em;
 }

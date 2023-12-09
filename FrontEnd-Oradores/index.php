@@ -1,3 +1,7 @@
+<?php
+date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona horaria para Argentina
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +11,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Integrador Anaya Christian</title>
 
 </head>
@@ -31,7 +35,7 @@
                             <a class="nav-link text-white" href="#Banner2">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#Orador1">Convertite en orador</a>
+                            <a class="nav-link text-white" href="#FormOradores">Convertite en orador</a>
                         </li>
                         <li class="nav-item ml-auto">
                             <a class="nav-link text-success" href="#Tipos">Comprar tickets</a>
@@ -136,7 +140,7 @@
     <br>
     <!--FORMULARIO-->
 
-    <div class="containerjs">
+    <div class="containerjs" id="FormOradores">
         <div class="titulojs">
             <p class="mb-0">CONVIERTETE EN UN </p>
             <h1>ORADOR</h1>
@@ -145,16 +149,23 @@
         </div>
         <div class="contact-wrapper0">
             <div class="formulariojs">
-                <form action="">
+                <form action="datos.php" method="get">
                     <p>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                     </p>
                     <p>
-                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
                     </p>
+                    <p>
+                        <input type="email" class="form-control" id="email" placeholder="Email@asad.com" name="email">
+                    </p>
+                    <p>
+                        <input type="date" class="form-control" id="fecha" name="fecha" value="<?php echo date('Y-m-d'); ?>">
+                    </p>
+
                     <p class="block">
                         <textarea class="form-control" id="charla" rows="4"
-                            placeholder="Sobre que quieres hablar?"></textarea>
+                            placeholder="Sobre que quieres hablar?" name="comentarios"></textarea>
                     </p>
                     <p class="text2">
                         <small class="form-text text-muted texto">Recuerda incluir un título para tu charla.</small>
