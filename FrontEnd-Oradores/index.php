@@ -9,62 +9,78 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Integrador Anaya Christian</title>
+    <title>Grup 5 integrador</title>
 
 </head>
 
 <body>
-    <header class="bg-dark text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-4">
-                    <img src="images/codoacodo.png" alt="Logo" class="img-fluid logo-custom">
-                </div>
-                <div class="col-8 text-right">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#carouselExampleIndicators">La conferencia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#Oradores">Los oradores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#Banner2">El lugar y la fecha</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#FormOradores">Convertite en orador</a>
-                        </li>
-                        <li class="nav-item ml-auto">
-                            <a class="nav-link text-success" href="#Tipos">Comprar tickets</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
+    <header class="header">
+        <?php include 'nav_bar.php'; ?>
     </header>
 
-    <div id="carouselExampleIndicators" class="container-fluid p-0 position-relative">
-        <div class="bg-image background-image-custom" style="background-image: url('images/ba1.jpg'); height: 600px;">
-            <div class="overlay"></div>
-
-            <div class="position-absolute text-white bottom-0 end-0 custom-padding" style="padding-right: 90px;">
-                <div class="mx-auto text-end" style="max-width: 800px;">
-                    <h1 class="text-white">Conf Bs As</h1>
-                    <p class="text-white">Bs As llega por primera vez a Argentina. Un evento para compartir con <br>
-                        nuestra comunidad el conocimiento y experiencia de los expertos que <br>
-                        están creando el futuro de Internet. Ven a conocer a miembros del <br>
-                        evento, a otros estudiantes de Codo a Codo y los oradores de primer<br>
-                        nivel que tenemos para ti. Te esperamos!</p>
-                    <br>
-                    <button class="btn custom-outline-btn text-white">Quiero ser orador</button>
-                    <button class="btn btn-success">Comprar tickets</button>
+    <div class="text-center">
+        <section class="imagen_grande">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/hawaii.jpg" class="d-block w-100" alt="...">
+                        <div class="contenido_fijo">
+                            <div class="col-6 fila2a"></div>
+                            <div class="col-5 fila2b">
+                                <div class="titulo_tarjeta">
+                                    <a>Conf Bs As</a>
+                                </div>
+                                <p class="blankito">
+                                    Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
+                                </p>
+                                <div class="botones_tarjeta">
+                                    <a href="#FormOradores">
+                                        <button type="button" class="btn btn-outline-secondary blankito"> Quiero ser orador</button>
+                                    </a>
+                                    <a href="#Tipos">
+                                        <button type="button" class="btn btn-success">Comprar tickets</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-1 fila2c"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/hawaii2.jpg" class="d-block w-100" alt="...">
+                        <div class="contenido_fijo">
+                            <div class="col-6 fila2a"></div>
+                            <div class="col-5 fila2b">
+                                <div class="titulo_tarjeta">
+                                    <a>Conf Bs As</a>
+                                </div>
+                                <p class="blankito">
+                                    Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
+                                </p>
+                                <div class="botones_tarjeta">
+                                    <a href="#FormOradores">
+                                        <button type="button" class="btn btn-outline-secondary blankito"> Quiero ser orador</button>
+                                    </a>
+                                    <a href="#Tipos">
+                                        <button type="button" class="btn btn-success">Comprar tickets</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-1 fila2c"></div>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </div>
+        </section>
     </div>
 
     <div class="container">
@@ -149,7 +165,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
         </div>
         <div class="contact-wrapper0">
             <div class="formulariojs">
-                <form action="datos.php" method="get">
+                <form action="insert.php" method="post" id="miFormulario">
                     <p>
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                     </p>
@@ -164,8 +180,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
                     </p>
 
                     <p class="block">
-                        <textarea class="form-control" id="charla" rows="4"
-                            placeholder="Sobre que quieres hablar?" name="comentarios"></textarea>
+                        <textarea class="form-control" id="charla" rows="4" placeholder="Sobre que quieres hablar?" name="comentarios"></textarea>
                     </p>
                     <p class="text2">
                         <small class="form-text text-muted texto">Recuerda incluir un título para tu charla.</small>
@@ -275,10 +290,33 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('miFormulario').addEventListener('submit', function(event) {
+                event.preventDefault();
+                enviarFormulario();
+            });
+        });
 
+        function enviarFormulario() {
+            // Realiza la petición AJAX para enviar el formulario
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'insert.php', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Muestra el mensaje de éxito
+                    alert(xhr.responseText);
+
+                    // Limpia el formulario
+                    document.getElementById('miFormulario').reset();
+                }
+            };
+            xhr.send(new FormData(document.getElementById('miFormulario')));
+        }
+    </script>
 </body>
 
 </html>
