@@ -39,6 +39,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
                                     <a href="#FormOradores">
                                         <button type="button" class="btn btn-outline-secondary blankito"> Quiero ser orador</button>
                                     </a>
+                                    <div class="espacio-entre-botones">a</div>
                                     <a href="#Tipos">
                                         <button type="button" class="btn btn-success">Comprar tickets</button>
                                     </a>
@@ -62,6 +63,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
                                     <a href="#FormOradores">
                                         <button type="button" class="btn btn-outline-secondary blankito"> Quiero ser orador</button>
                                     </a>
+                                    <div class="espacio-entre-botones"></div>
                                     <a href="#Tipos">
                                         <button type="button" class="btn btn-success">Comprar tickets</button>
                                     </a>
@@ -292,31 +294,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('miFormulario').addEventListener('submit', function(event) {
-                event.preventDefault();
-                enviarFormulario();
-            });
-        });
-
-        function enviarFormulario() {
-            // Realiza la petición AJAX para enviar el formulario
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'insert.php', true);
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Muestra el mensaje de éxito
-                    alert(xhr.responseText);
-
-                    // Limpia el formulario
-                    document.getElementById('miFormulario').reset();
-                }
-            };
-            xhr.send(new FormData(document.getElementById('miFormulario')));
-        }
-    </script>
+    <script src="alert.js"></script>
 </body>
 
 </html>

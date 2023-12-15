@@ -4,7 +4,7 @@ $conexion = mysqli_connect("localhost", "root", "", "integrador_cac");
 if(mysqli_connect_errno()){
     echo "No se conectó por un error: " . mysqli_connect_errno();
 } else {
-    echo "Se conectó con éxito";
+    echo "Se conectó con éxito a la Base de Datos, ";
 }
 
 $consulta = mysqli_query($conexion, "SELECT * FROM oradores");

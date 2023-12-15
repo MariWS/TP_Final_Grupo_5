@@ -79,6 +79,9 @@
     display: flex;
     justify-content: right;
 }
+.espacio-entre-botones {
+    margin-right: 10px; 
+}
 
 
 .blankito {
