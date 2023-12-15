@@ -39,7 +39,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
                                     <a href="#FormOradores">
                                         <button type="button" class="btn btn-outline-secondary blankito"> Quiero ser orador</button>
                                     </a>
-                                    <div class="espacio-entre-botones">a</div>
+                                    <div class="espacio-entre-botones"></div>
                                     <a href="#Tipos">
                                         <button type="button" class="btn btn-success">Comprar tickets</button>
                                     </a>
