@@ -1,0 +1,30 @@
+[33mcommit 8c8159a627d51bbaab2668b09aac2148d7202551[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v0.1.5[m[33m)[m
+Author: MariWS <marielactedesco1980@gmail.com>
+Date:   Fri Nov 10 19:32:13 2023 -0300
+
+    se agrega carpeta de BD Integrador_cac
+
+[1mdiff --git a/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git Hub 1.png b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git Hub 1.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..93d2df3[m
+Binary files /dev/null and b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git Hub 1.png differ
+[1mdiff --git a/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 2.png b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 2.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ed3629b[m
+Binary files /dev/null and b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 2.png differ
+[1mdiff --git a/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 3.png b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 3.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..be3974c[m
+Binary files /dev/null and b/Base de Datos Integrador_cac/imagenes BD Integrador_cac/Git hub 3.png differ
+[1mdiff --git a/comentarios.txt b/comentarios.txt[m
+[1mindex 495ec0a..06557e1 100644[m
+[1m--- a/comentarios.txt[m
+[1m+++ b/comentarios.txt[m
+[36m@@ -3,4 +3,5 @@[m [mcommit 718f2e1ce141bb104183a1739c647f19dfdb8442[m
+ 0.0.3 mismas modificaciones @mediaQuery max-width: 480px[m
+ 0.0.4 se especifico @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {[m
+ corrección responsive posicion de tarjetas[m
+[31m-0.0.5 se agrego sección "Promos"[m
+\ No newline at end of file[m
+[32m+[m[32m0.0.5 se agrego sección "Promos"[m
+[32m+[m[32m0.1.5 se agrego carpeta BD Integrador_cac[m

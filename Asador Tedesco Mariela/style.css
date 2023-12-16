@@ -1,0 +1,787 @@
+body {
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  width: auto;
+  box-sizing: border-box;
+}
+
+
+
+/*header {
+        background: url(imagenes/fuego.jpg) no-repeat center;
+        background-size: cover;
+        width:  100%;
+        height: 500px;
+        
+    }
+  */
+
+
+
+            /* Inicio nav bar*/
+
+
+#navbar {
+
+  width: 100%;
+  padding: 15px;
+}
+
+
+
+header .navbar {
+
+  background-color: transparent !important;
+  text-shadow: -1.2px 1px 1px #030303;
+  position: absolute;
+  z-index: 2;
+
+}
+
+
+            /* fin nav bar*/
+
+
+
+            /* Inicio Carrusel */
+
+
+.carrtop {
+
+  position: relative;
+  z-index: 1;
+
+}
+
+
+.carousel-caption {
+
+  margin-bottom: 300px;
+  text-shadow: 1px 1px 2px #030303;
+  -webkit-text-stroke: #000000;
+
+}
+
+
+
+
+h2,
+h3,
+h5 {
+
+  color: white;
+
+}
+
+
+p {
+
+  color: white;
+
+}
+
+            /*Fin Carrusel*/
+
+
+
+
+            /*Inicio tarjetas*/
+
+#tarj {
+
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.card {
+  margin: 50px 20px;
+  background-color: rgb(39, 38, 38);
+  box-shadow: 1px 1px 3px #525252;
+
+}
+
+
+.card-title {
+
+  color: rgb(245, 140, 3);
+
+}
+
+
+            /* fin tarjetas*/
+
+
+
+
+            /* Inicio imagenes*/
+
+
+#imgcontcomp {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 3px 2px 3px #525252;
+}
+
+#imagcomp {
+
+  position: absolute;
+}
+
+
+#despenimag {
+
+
+  position: absolute;
+  width: auto;
+  height: 500px;
+  padding: 50px;
+  margin-left: 50px;
+  text-align: center;
+  text-shadow: 1px 1px 0.2px #030303;
+
+}
+
+            /* Fin imagenes*/
+
+
+
+            /* Inicio Formulario*/
+
+
+
+#FmoRes {
+  
+  width: auto;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%; 
+
+
+}
+
+form {
+ 
+  box-shadow: 4px 4px 5px 4px #525252;
+  margin: 20px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+
+
+.nyap {
+
+ 
+  margin: 2PX;
+  padding: 2px;
+
+}
+
+
+
+label {
+
+  padding: 20px;
+  margin: 5PX;
+
+  
+}
+
+
+
+.res {
+
+  color: #030303;
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+#areat {
+
+  margin: 20px 10px;
+  
+}
+
+
+
+/*calendario de reservas*/
+
+#reservas {
+
+margin: 5px;
+padding: 5px;
+ 
+}
+
+/*fin caledario de reservas*/
+
+
+
+
+            /* Fin Formulario*/
+
+
+
+
+
+            /*Inicio footer*/
+
+
+
+footer {
+  margin: auto;
+
+
+  }
+
+
+footer a {
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+
+#cop {
+
+  text-decoration: none;
+  color: white;
+}
+
+#desarr {
+
+  font-size: 13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#redess{
+
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  
+}
+
+
+ p.h5{
+
+  margin-top: 15px;
+  
+}            
+
+
+.imgreds{
+
+  padding: 5px;
+  
+}  
+            /*Fin de Footer*/
+
+
+
+
+        
+            /*@mediaQuery*/
+
+@media  (max-width : 480px){
+
+
+            /*  nav bar*/
+
+  header .navbar {
+  
+  background-color: #59020279 !important;        
+ 
+  }
+
+  nav h2,
+  h3,
+  h5 {
+
+    font-size: 15px;
+  }
+
+  nav p {
+
+    font-size: 14px;
+
+  }
+
+            /* Fin nav bar*/
+
+
+
+
+
+            /* Inicio Carrusel */
+
+
+
+              /* Fin Carrusel */
+
+
+
+
+
+              /*tarjetas*/
+
+
+  #tarj {
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+  }
+
+
+  .card {
+
+    font-size: small;
+  
+  }
+
+
+
+              /* Fin tarjetas*/
+
+  
+
+              /* Imágenes */
+
+             
+  #imgcontcomp {
+
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+
+  #despenimag {
+
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .imgtam{
+
+    height: auto;
+
+
+  }
+
+               /* Fin Imágenes */
+
+
+               /* Inicio Formulario*/
+
+
+  #FmoRes {
+  
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+              /*form. calendario google*/
+
+
+/*
+  #resv{
+  
+  height: auto !important;
+  width: auto;
+  
+  }
+  
+  */
+  
+  
+  /*
+.nyap {
+
+ 
+  margin: auto;
+  padding: auto;
+
+}
+
+
+label {
+
+  padding: auto;
+  margin: auto;
+
+  
+}
+
+/*
+
+
+
+            /* Fin Formulario*/
+
+
+}  
+
+
+/*  @media750  */
+
+
+@media  (max-width : 750px){
+
+
+
+             /* Inicio Formulario*/
+
+
+.nyap{
+
+display: flex;
+flex-direction: column;
+              
+
+}
+
+
+  /*Fin Formulario*/
+
+}     
+             /*fin @mediaQuery*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+  /*---------------PROMOS*--------------/
+
+  
+              /***FORMULARIO***/
+
+#formP{
+  
+    margin: 10%;
+    padding: 10%;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  
+  }
+
+    /*TITULO FORM-IMAGEN*/
+
+
+#imgfrm{
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+      
+
+}
+
+
+#frm{
+
+  text-align: center;
+  text-shadow: 2px 3px 4px rgb(241, 132, 7);
+  padding-bottom: 50px;
+}
+
+
+#imgf{
+
+  border-radius: 10px;
+  box-shadow: 6px 10px 15px black ;
+
+}
+
+      /*Fin Titulo*/
+
+
+    /*DETALLE PARRILLADA*/
+
+
+#detalle{
+
+  margin-top: 50px;
+  box-shadow: 2px 3px 4px  #000000;
+   padding: 20px  
+
+}
+
+
+#lista{
+
+  padding: 5% 25%;
+
+}
+
+
+#titdetalle{
+
+  color: red;
+  text-shadow: 1px 1px 1px #000000;
+  text-decoration: rgb(167, 35, 35) 1px underline;
+}
+
+
+#precsindesc{
+
+  margin: 20px 40px ;
+  height: 90px;
+  text-decoration: rgb(243, 12, 12) line-through;
+  text-shadow: 2px 2px 3px rgb(240, 240, 240);
+  background-color: #000000;
+  border-radius: 50%;
+  text-align: center;
+
+
+}
+
+#prec{
+
+
+  font-size: 50px;
+
+}
+
+    /*FIN DETALLE PARRILLADA*/
+
+
+
+    /*INICIO TARJETAS*/
+
+
+#descc{
+
+  color: red;
+  text-shadow: 2px 1px 2px white;
+  font-size: 25px;
+}
+
+
+
+#porc{
+
+  font-size: 30px;
+  text-shadow: 2px 3px 4px rgb(252, 10, 10);
+ 
+}
+
+
+
+.pf{
+
+  color: rgb(138, 255, 127);
+  font-size: 30px;
+}
+
+
+
+#aclr{
+
+  font-size: 10px;
+
+}
+
+
+
+
+      /*FIN TARJETAS*/
+
+      
+      
+      
+      /*INICIO DATOS*/
+
+
+#datos{
+
+  padding: 10px;
+
+}
+
+
+
+      /*FIN DATOS*/
+
+
+
+
+
+    /*INICIO SELECCION DE PROMOCIONES*/
+ 
+
+
+#cantprom{
+display: flex;
+flex-direction: row;
+height: 50px;
+
+}
+
+
+
+
+ 
+  h4 {
+
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  label{
+
+    padding: 10px;
+
+  }
+
+
+  #Totaldisplay{
+
+    background-color: rgba(0, 195, 255, 0.356);
+
+  }
+
+  #botnsfn{
+
+    flex-direction: row;
+    
+  }
+
+
+      /*FIN SELECCION DE PROMOCIONES*/
+
+
+
+          /***FIN FORMULARIO***/
+
+
+
+
+          /***@MEDIAQUERY***/
+
+  /*@media 480px*/
+
+  @media  (max-width : 480px) {
+  
+
+    /*Detalle*/
+
+    #detalle{
+
+      margin-top: 20px;
+      padding: 10px  
+  
+    }
+  
+  
+    #lista{
+  
+      padding: 5% 10%;
+  
+    }
+
+
+    
+   /*Tarjetas*/ 
+
+  #cantprom{
+   
+    flex-direction: column;
+         
+    }
+
+    .card{
+      
+      flex-wrap: wrap;
+      margin: 5px;
+      padding: 5px;  
+    }
+  }
+
+
+  /*  FIN  @media 480px */
+
+
+
+
+  /*  INICIO  @media 750px */
+
+
+  @media  (max-width : 750px) {
+  
+    
+    /*Detalle*/
+
+    #detalle{
+
+      margin-top: 20px;
+      padding: 10px  
+  
+    }
+  
+  
+    #lista{
+  
+      padding: 5% 10%;
+  
+    }
+
+
+   
+
+
+       /*Tarjetas*/
+
+
+      .card{
+        
+        flex-wrap: wrap;
+        margin: 5px;
+        padding: 5px;  
+      }
+
+      
+
+
+      /*seleccion cantidad*/
+
+
+    #cantprom{
+     
+      flex-direction: column;
+           
+      }
+
+
+    }
+
+    /*  FIN  @media 750px */
+
+
+
+        /***FIN @MEDIAQUERY***/
+
+
+
+/**************/      /****************/     /**************/

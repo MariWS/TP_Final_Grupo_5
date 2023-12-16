@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css"">
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+    <!--Header-->
+
+    <header>
+
+
+        <!-- div padre-->
+
+        <div id=" fdo">
+    <!-- Inicio Nav-->
+
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" class="fl">
+
+            <!--logo-->
+            <a class="navbar-brand" href="#"> <img src="imagenes/logo.png" height="80px">
+            </a>
+            <!--fin logo-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menues
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Platos</a></li>
+                            <li><a class="dropdown-item" href="#">Postres</a></li>
+                            <li>
+                                <hr class="dropdown-divider">Menu Vegano
+                            </li>
+                            <li><a class="dropdown-item" href="#"> Menu Vegano / Vegetarianos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">Menu Especial
+                            </li>
+                            <li><a class="dropdown-item" href="#"> Menu para Fiestas y Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promos.html">Promos</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </nav>
+
+    <!-- Fin Nav-->
+
+
+
+    <!--Inicio carrusel-->
+
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" class="carrtop" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="imagenes/fuego.jpg" class="d-block w-100" alt="fuego" height="150%">
+                <div class="carousel-caption d-none d-md-block" class="descrip">
+                    <h3 class="carru">Auténtico Asador Argentino en Madrid</h3>
+                    <p class="carru">En el corazón de la capital Española</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="imagenes/fuegob(1).png" class="d-block w-100" alt="fuego1" height="150%">
+                <div class="carousel-caption d-none d-md-block" class="descrip">
+                    <h3 class="carru">Carnes Selecionadas de Ternera, Cordero, Cochinillo y más..</h3>
+                    <p class="carru">Te invitamos a viajar por los sabores de la tierra Argentina</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/fuegob2.jpg" class="d-block w-100" alt="Fuego2" height="150%">
+                <div class="carousel-caption d-none d-md-block" class="descrip">
+                    <h3 class="carru">Los Martes invitación Especial</h3>
+                    <p class="carru">Degustacion de Vinos procedentes de la región <I>Cuyana Argentina</I>:
+                        <B>COMO LA RIOJA y MENDOZA..
+                        </B>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Fin carrusel-->
+
+    </div>
+    <!--Fin div padre-->
+
+    </header>
+
+    <!-- Fin Header-->
+
+
+
+
+
+
+    <!--  botón de reservas flotante
+
+  <div id="botonreser">
+
+    <a href=""> <img src="/imagenes/RESERVAS.png" alt=""></a>
+   
+  </div>
+
+  css 
+      background      
+        border-bottom-left-radius: 10px;
+       border-bottom-right-radius: 10px;
+-->
+
+
+
+
+    <!--Inicio tarjetas-->
+
+
+
+
+    <section id="tarj" class="animate__animated animate__slideInRight">
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="imagenes/carne al asador seleccionadas.png" class="card-img-top" alt="carnes al asador">
+            <div class="card-body">
+                <h5 class="card-title">Deleitese con los Sabores</h5>
+                <p class="card-text">En nuestro Asador encontrará los tradicionales sabores característicos de
+                    Argentina. <br>
+                    Fusionamos en nuestros platos, los más selectos cortes de carne de Ternera Brahman y Angus, con las
+                    típicas
+                    Verduras del país.</p>
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="imagenes/copa de vino.png" class="card-img-top" alt="carnes al asador">
+            <div class="card-body">
+                <h5 class="card-title">Viaje por los Rincones del Cuyo Argentino</h5>
+                <p class="card-text">Cada Martes deguste en nuestro rincón de Sommeliers las más destacadas cosechas
+                    Riojanas y
+                    Mendocinas que acompañará con preparaciones culinarias regionales.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="imagenes/postres.jpg" class="card-img-top" alt="carnes al asador">
+            <div class="card-body">
+                <h5 class="card-title">Delicatessen </h5>
+                <p class="card-text">Postres Gourmet: Velvet, Queques, Creme Brulee, Crumble, Kuchen, Trifle, Strudel,
+                    Panna
+                    Cotta, Parfait, Soufflé, Bavarois.</p>
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <!--fin tarjetas-->
+
+
+
+    <!--Inicio imágenes-->
+
+
+
+    <div id="imgcontcomp" class="animate__animated animate__fadeInLeft">
+
+        <div class="imagcomp">
+
+            <img id="imgn1" class="imgtam" src="imagenes/carnes a la parrilla (6).jpg" width="100%" height="500px">
+
+
+        </div>
+
+
+        <div>
+
+            <img id="imgn2" class="imgtam" src="imagenes/carnes a la parrilla (1).jpg" alt="carnes cortes especiales"
+                width="100%" height="500px">
+
+        </div>
+
+        <div id="despenimag">
+
+            <h5>Carnes Magras</h5>
+            <p>Importadas de la region <B>pampeana</B> de Argentina</p>
+
+        </div>
+
+    </div>
+
+    <!-- Fin imágenes-->
+
+
+
+
+    <!--Inicio formulario de Reservas-->
+
+
+
+
+    <div id="FmoRes">
+
+
+        <form action="" class="animate__animated animate__rubberBand">
+
+            <div>
+
+                <h3 class="res"><b>Reservas</b></h3>
+
+            </div>
+
+            <div class="nyap">
+
+                <label for="Nombre">Nombre</label>
+
+                <input type="text" id="nombre" placeholder="Nombre" required>
+
+
+                <label for="apellido">Apellido</label>
+
+                <input type="text" id="apellido" placeholder="Apellido" required>
+
+
+
+            </div>
+
+            <!--textarea-->
+
+            <div id="areat" class="form-floating">
+                <textarea class="form-control" placeholder="Indique horario y cantidad de comensales "
+                    id="floatingTextarea2" style="height: 150px"></textarea>
+                <label for="floatingTextarea2">Indique horario y cantidad de comensales</label>
+            </div>
+
+            <!--Calendario Google-->
+
+            <section id="reservas">
+
+                <iframe id="resv"
+                    src="https://calendar.google.com/calendar/embed?src=da734bb34a34760b603dbeca292231cdea322e490b8fcea2fd965c13cb21d053%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires"
+                    style="border: 0" frameborder="0" height="200px" width="auto" scrolling="no">
+                </iframe>
+
+
+            </section>
+
+            <!--Botón Enviar-->
+
+            <div class="col-auto">
+
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!--Fin Formulario de Reservas-->
+
+
+
+    <!--Inicio footer-->
+
+
+    <!--logo Footer-->
+
+    <footer class="container-fluid" >
+
+        <div class="row p-5 pb-2 bg-dark ">
+
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <img src="imagenes/logo.png" alt="logo asador Mariela" width="150px">
+            </div>
+
+            <!--Fin Logo Footer-->
+
+            <!--Info de Menues-->
+
+            <div class="col-xs-12 col-md-6 col-lg-2" >
+                <p class="h5"> CARTA </p>
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Platos Principales</a>
+                </div>
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Menú Especial</a>
+                </div>
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Menú Vegano</a>
+                </div>
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Postres</a>
+                </div>
+
+            </div>
+
+            <!--Info Contacto-->
+
+            <div class="col-xs-12 col-md-6 col-lg-4" >
+                <p class="h5"> CONTACTO </p>
+                <div class="mb-2">
+                    <a href="https://api.whatsapp.com/send?phone=541160241989" class="text-white text-decoration-none"
+                        target="_blank"> <img src="../imagenes/whatsapplogo.png" alt="whatsapp" height="20px"> 11 6024
+                        1989 </a>
+
+                </div>
+
+                <!--Mapa de ubicación Geográfica de Google-->
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none"> Madrid, España.<iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194347.47826783554!2d-3.844348268337683!3d40.43809861109271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2zTWFkcmlkLCBFc3Bhw7Fh!5e0!3m2!1ses-419!2sar!4v1698795655642!5m2!1ses-419!2sar"
+                            width="auto" height="auto" style="border-radius: 5px;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                    <!--Redes Sociales-->
+
+
+                <div id="redess">
+                
+
+                    <div class="col-xs-6 col-md-4 col-lg-2" >
+                        <a href=""> <img src="imagenes/face (2).png" alt="Facebook" height="50px" class="imgreds" ></a>
+                        
+                    </div>
+
+                    <div class="col-xs-6 col-md-4 col-lg-2" >
+                        <a href=""> <img src="imagenes/inst.png" alt="Instagram" height="50px" class="imgreds"></a>
+
+                    </div>
+                
+                </div>
+       
+            </div>
+
+
+          
+
+            <!--Info LEGALES-->
+
+            <div class="col-xs-12 col-md-6 col-lg-3 " >
+             
+                             
+                <p class="h5"> LEGALES </p>
+
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Política de Privacidad</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Términos y Condiciones</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Políticas de Cookies</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Descargo de Responsabilidad</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="text-white text-decoration-none">Noticias Copyright</a>
+                </div>
+                
+
+             </div>
+
+                    <!--Der. de Copywriting-->
+
+                    <div class="col-xs-12 pt-5">
+
+                        <p class="text-white text-center">
+                            <a id="cop" href="">© 2023 ASADOR PARRILLA MARIELA / Todos los derechos reservados </a>
+
+                        </p>
+
+                        <!--Info Desarrollador/ Comisión #23584 / Profe. José Alejandro Zapata-->
+
+                        <P id="desarr" class="text-white text-center"> Desarrolador MARIELA TEDESCO CODO A CODO
+
+                        </P>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+    </footer>
+
+
+    <!--Fin Footer-->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script src="script.js"></script>
+
+    </body>
+
+
+
+</html>
