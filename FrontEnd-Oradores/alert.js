@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('enviar').addEventListener('click', function (event) {
         event.preventDefault(); // evita el envio normal del form
-        enviarFormulario();
+        enviarFormulario('miFormulario');
+    });
+	document.getElementById('Comprar').addEventListener('click', function (event) {
+        event.preventDefault(); 
+        enviarFormulario('caja2');
     });
 });
 
-function enviarFormulario() {
-    var formulario = document.getElementById('miFormulario');
-    var formData = new FormData(formulario);
+function enviarFormulario(cualquierFormulario) {
+    var formulario = document.getElementById(cualquierFormulario);
+	var formData = new FormData(formulario);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'insert.php', true);

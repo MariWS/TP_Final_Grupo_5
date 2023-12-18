@@ -2,7 +2,8 @@
 
 require 'conexion.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formOradores'])) {
     $nombreForm = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $apellidoForm = isset($_POST['apellido']) ? $_POST['apellido'] : '';
     $correoForm = isset($_POST['email']) ? $_POST['email'] : '';
@@ -15,12 +16,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     '$fechaForm')");
 
     if (!$insertar) {
-        echo "No se insertó con éxito en la BD";
+        echo "\n Error: No se se pudo insertar los datos del Orador en la BD";
     } else {
         echo "y se envio el Formulario con exito, puede verificarlo en \"Administrar\"";
-    }
+    } 
+	
 } else {
-    echo "No se pudo insertar";
-    header('location: index.php');
+    
+		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formTickets'])) {
+    $nombreTicket = isset($_POST['nombrejv']) ? $_POST['nombrejv'] : '';
+    $apellidoTicket = isset($_POST['apellidojv']) ? $_POST['apellidojv'] : '';
+    $correoTicket = isset($_POST['correojv']) ? $_POST['correojv'] : '';
+    $cantidadTicket = isset($_POST['cantidadjs']) ? $_POST['cantidadjs'] : '';
+    $categoriaTicket = isset($_POST['categoriajs']) ? $_POST['categoriajs'] : '';
+	$totalTicketRaw = isset($_POST['valorInput1']) ? $_POST['valorInput1'] : '';
+	$totalTicket = explode("$", $totalTicketRaw);
+	
+	 
+	$insertarTicket = mysqli_query($conexion,"INSERT INTO tickets(
+    nombre, apellido, email,cantidad,categoria,total) VALUES
+    ('$nombreTicket', '$apellidoTicket', ' $correoTicket', '$cantidadTicket', 
+    '$categoriaTicket', '$totalTicket[1]')");
+	
+		if (!$insertarTicket) {
+			echo "\n Error: No se pudo insertar la venta de tickets  en la BD";
+		} else {
+			echo "y se envio el Formulario con exito, puede verificarlo en \"Administrar\"";
+		}
+			
+	} else {
+			echo "\n Error: No se pudo insertar los datos.";
+			header('location: index.php');
+	}
 }
 ?>

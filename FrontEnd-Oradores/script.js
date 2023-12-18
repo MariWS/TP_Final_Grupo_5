@@ -1,9 +1,10 @@
-var capturaFormulario= document.getElementById("caja2")
+var capturaFormulario= document.getElementById("categoriajs")
 console.log(capturaFormulario)
 
-capturaFormulario.addEventListener('submit',function(e){
+capturaFormulario.addEventListener('change',function(e){
     e.preventDefault();
-    ResumenFormulario()
+    ResumenFormulario();
+	
 })
 
 // Calculo
@@ -32,6 +33,9 @@ function ResumenFormulario() {
     console.log(Descuento);
     const capturaLabel = document.getElementById("valorInput1");
 
-    capturaLabel.textContent = 'Total a pagar: $' + Descuento;
+     /* capturaLabel.textContent = 'Total a pagar: $' + Descuento;  */
+	 capturaLabel.value = "Total a pagar: $"+ Descuento; 
+	 
+	 
   }
   

@@ -16,7 +16,7 @@
  <html lang="en">
 
  <head>
-   <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>php y html</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -30,6 +30,7 @@
  <body>
     <?php echo "<br> a<br> a<br> "?>
 	<div class="container mt-5">
+	<?php require 'conexion.php';?>
    <ul class="nav nav-tabs " id="myTab" role="tablist">
 	  <li class="nav-item" role="presentation">
 		 <!--<a class="nav-link active" aria-current="page" href="#">Oradores</a> -->
@@ -52,7 +53,7 @@
 	  <div class="tab-pane fade show active" id="listaOradores" role="tabpanel" aria-labelledby="oradores-tab">
 		 
 		 <h2>Registros de la tabla</h2>
-		 <?php require 'conexion.php'; ?>
+		 
 		
 		
 		 <table class="table">
@@ -77,7 +78,7 @@
 				echo "<td>" . $fila['email'] . "</td>";
 				echo "<td>" . $fila['tema'] . "</td>";
 				echo "<td>" . $fila['fecha_alta'] . "</td>";
-				echo "<td><a class='btn btn-danger' href='./acciones.php?accion=borrar&id=" . $fila['id_orador'] . "'>Borrar</a>  <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#editarModal\" onclick=\"editar(".$fila['id_orador'].")\">  Editar</button> </td>";
+				echo "<td><a class='btn btn-danger' href='./acciones.php?borrar=orador&id=" . $fila['id_orador'] . "'>Borrar</a>  <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#editarModal\" onclick=\"editar(".$fila['id_orador'].",'orador')\">  Editar</button> </td>";
 				echo "</tr>";
 			  }
 			  ?>
@@ -95,7 +96,7 @@
 		  </div>
 		  <div class="modal-body">
 			<form id="editarFormulario" name="editarFormulario" action="./acciones.php" method="POST">
-			 <label for="id_orador" class="form-label">Orador_id</label>
+			 <label for="id_orador" class="form-label">Id_orador</label>
 			 <input type="text" name="id_orador" id="id_orador" class="form-control" readonly/>
 			 <label for="nombre" class="form-label">Nombre</label>
 			 <input type="text" name="nombre" id="nombre" class="form-control" />
@@ -116,9 +117,79 @@
 		</div>
 	  </div>
 	</div>
+	<!--END Modal--->
   </div>
-  <div class="tab-pane fade" id="listaTickets" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="otra" role="tabpanel" aria-labelledby="otra-tab">...</div>
+  <div class="tab-pane fade" id="listaTickets" role="tabpanel" aria-labelledby="profile-tab">
+	 <h2>Registros de la tabla</h2>
+		 <?php $consulta_tickets = mysqli_query($conexion, "SELECT * FROM tickets"); ?>
+	
+		 <table class="table">
+		   <thead>
+			 <tr>
+			   <th>id_ticket</th>
+			   <th>Nombre</th>
+			   <th>Apellido</th>
+			   <th>Email</th>
+			   <th>Cantidad</th>
+			   <th>Categoria</th>
+			   <th>Total</th>
+			   <th>Acciones</th>
+			 </tr>
+		   </thead>
+		   <tbody>
+			 <?php
+			   while ($fila = mysqli_fetch_assoc($consulta_tickets)) {
+				echo "<tr id='ticket-".$fila['id_ticket']."'>";
+				echo "<td>" . $fila['id_ticket'] . "</td>";
+				echo "<td>" . $fila['nombre'] . "</td>";
+				echo "<td>" . $fila['apellido'] . "</td>";
+				echo "<td>" . $fila['email'] . "</td>";
+				echo "<td>" . $fila['cantidad'] . "</td>";
+				echo "<td>" . $fila['categoria'] . "</td>";
+				echo "<td>$" . $fila['total'] . "</td>";
+				echo "<td><a class='btn btn-danger' href='./acciones.php?borrar=ticket&id=" . $fila['id_ticket'] . "'>Borrar</a>  <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#editarModalTickets\" onclick=\"editar(".$fila['id_ticket'].",'tickets')\">  Editar</button> </td>";
+				echo "</tr>";
+			  } 
+			  ?>
+		   </tbody>
+		 </table>
+		 	<!-- Modal Tickets -->
+	<div class="modal fade" id="editarModalTickets" tabindex="-1" aria-labelledby="editarModalTicketsLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="modal-title fs-5" id="editarModalTicketsLabel">Editar Venta del Ticket</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			<form id="editarFormularioTickets" name="editarFormularioTickets" action="./acciones.php" method="POST">
+			 <label for="id_ticket" class="form-label">id_ticket</label>
+			 <input type="text" name="id_ticket" id="id_ticket" class="form-control" readonly/>
+			 <label for="nombreTickets" class="form-label">Nombre</label>
+			 <input type="text" name="nombreTickets" id="nombreTickets" class="form-control" />
+			  <label for="apellidoTickets" class="form-label">Apellido</label>
+			 <input type="text" name="apellidoTickets" id="apellidoTickets" class="form-control" />
+			  <label for="emailTickets" class="form-label">Email</label>
+			 <input type="email" name="emailTickets" id="emailTickets" class="form-control" />
+			  <label for="cantidadTickets" class="form-label">Cantidad:</label>
+			 <input type="number" name="cantidadTickets" id="cantidadTickets" class="form-control" />
+			 <label for="categoriaTickets" class="form-label">Categoria</label>
+			 <input type="text" name="categoriaTickets" id="categoriaTickets" class="form-control" />
+			  <label for="totalTickets" class="form-label">Total: $</label>
+			 <input type="number" step="0.01" min="0.00" name="totalTickets" id="totalTickets" class="form-control" />
+			 </form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+			<button type="submit" class="btn btn-primary" form="editarFormularioTickets">Guardar Cambios</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!--END Modal--->
+		 
+  </div>
+  <div class="tab-pane fade" id="otra" role="tabpanel" aria-labelledby="otra-tab"> Otra tabla...</div>
 </div>
 </div>
   

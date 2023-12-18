@@ -168,6 +168,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
         <div class="contact-wrapper0">
             <div class="formulariojs">
                 <form action="insert.php" method="post" id="miFormulario">
+				<input type="hidden" name="formOradores">
                     <p>
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                     </p>
@@ -231,7 +232,8 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
         </div>
         <div class="contact-wrapper0">
             <div class="formulariojs">
-                <form action="" id="caja2">
+                <form action="" id="caja2" name="caja2">
+				<input type="hidden" name="formTickets">
                     <p>
                         <input type="text" name="nombrejv" placeholder="Nombre">
                     </p>
@@ -249,20 +251,22 @@ date_default_timezone_set('America/Argentina/Buenos_Aires'); // Ajusta la zona h
                     <p>
                         <label for="categoriajs">Categoria</label><br>
                         <select name="categoriajs" id="categoriajs">
-                            <option id="Estudiante" value="Estudiante">Estudiante</option>
+                            <option id="default" value="" selected="true" disabled="disabled">Elegir...</option>
+							<option id="Estudiante" value="Estudiante">Estudiante</option>
                             <option id="Trainee" value="Trainee">Trainee</option>
                             <option id="Junior" value="Junior">Junior</option>
                         </select>
 
                     </p>
                     <p class="block">
-                        <label for="" id="valorInput1">Total a pagar: $ -</label>
+                        <!-- <label for="" id="valorInput1">Total a pagar: $ -</label> -->
+						<input type="text" name="valorInput1" id="valorInput1" value="Total a pagar: $ -" readonly/>
                     </p>
                     <p>
                         <button type="reset" id="Borrar">Borrar</button>
                     </p>
                     <p>
-                        <button type="submit" id="Resumen">Resumen</button>
+                        <button type="submit" id="Comprar">Comprar</button>
                     </p>
                 </form>
             </div>
