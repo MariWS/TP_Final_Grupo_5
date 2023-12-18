@@ -55,6 +55,33 @@ INSERT INTO `oradores` (`id_orador`, `nombre`, `apellido`, `email`, `tema`, `fec
 (18, 'Christian2', 'Anaya2', 'arlethanayaavila2@gmail.com', '1123 ', '2023-12-12'),
 (19, '', '', '', ' ', '0000-00-00');
 
+
+--
+-- Estructura de tabla para la tabla `tickets`
+--
+
+CREATE TABLE `tickets` (
+  `id_ticket` int(11) NOT NULL,
+  `nombre` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellido` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cantidad` tinyint(4) NOT NULL,
+  `categoria` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `total` decimal(8,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `tickets`
+--
+
+INSERT INTO `tickets` (`id_ticket`, `nombre`, `apellido`, `email`, `cantidad`, `categoria`, `total`) VALUES
+(1, 'Maximiliano', 'Betancourt', ' betan@gmail.com', 3, 'Junior', '510.00'),
+(2, 'Belen', 'Gomez', ' belenchu@hotmail.com', 1, 'Estudiante', '40.00'),
+(3, 'Pancracio', 'Klinfurthmal', ' Paklin@outlook.com', 10, 'Trainee', '1000.00');
+
+
+
+
 --
 -- Índices para tablas volcadas
 --
@@ -67,6 +94,13 @@ ALTER TABLE `oradores`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indices de la tabla `tickets`
+--
+ALTER TABLE `tickets`
+  ADD PRIMARY KEY (`id_ticket`);
+
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -76,6 +110,14 @@ ALTER TABLE `oradores`
 ALTER TABLE `oradores`
   MODIFY `id_orador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
+
+--
+-- AUTO_INCREMENT de la tabla `tickets`
+--
+ALTER TABLE `tickets`
+  MODIFY `id_ticket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
